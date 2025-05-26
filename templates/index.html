@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quantexo Web</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Quantexo</h1>
+        <div class="controls">
+            <select id="sector"></select>
+            <select id="company"></select>
+            <input type="text" id="symbol" placeholder="🔍 Enter Symbol">
+            <button id="search">Search</button>
+        </div>
+        <div id="status"></div>
+        <div id="chart"></div>
+    </div>
+    <script src="/static/app.js"></script>
+</body>
+</html>
