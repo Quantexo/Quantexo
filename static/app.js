@@ -52,12 +52,17 @@ document.addEventListener('DOMContentLoaded', function() {
                 chartDiv.innerHTML = "";
             } else {
                 statusDiv.textContent = "";
-                Plotly.newPlot('chart', data.traces, data.layout, {responsive: true});
+                Plotly.newPlot('chart', data.traces, data.layout, {responsive: true, useResizeHandler: true});
             }
         })
         .catch(err => {
             statusDiv.textContent = "Error: " + err;
             chartDiv.innerHTML = "";
         });
+    });
+
+    // Optional: trigger search on Enter key in input
+    symbolInput.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter') searchBtn.click();
     });
 });

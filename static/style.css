@@ -1,29 +1,59 @@
 body {
-    background-color: darkslategray;
+    background-color: #2F4F4F; /* darkslategray */
     color: white;
     font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
 }
+
 .container {
     margin: 40px auto;
     max-width: 1200px;
+    text-align: center;
 }
+
 .controls {
     margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
 }
+
 #chart {
+    width: 100%;
+    min-height: 600px;
     margin-top: 30px;
 }
+
 select, input, button {
-    margin-right: 10px;
     padding: 8px;
     font-size: 16px;
+    background: #2F4F4F;
+    color: white;
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
+
+input::placeholder {
+    color: #ccc;
+}
+
 button {
     background: #008080;
     color: white;
     border: none;
     border-radius: 4px;
+    cursor: pointer;
 }
+
 button:hover {
     background: #005f5f;
+}
+
+#status {
+    margin-top: 10px;
+    min-height: 24px;
+    color: #ffb347;
+    font-weight: bold;
 }
